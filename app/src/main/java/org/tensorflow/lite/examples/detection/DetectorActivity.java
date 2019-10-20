@@ -63,10 +63,10 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
     private static final int TF_OD_API_INPUT_SIZE = 300;
     private static final boolean TF_OD_API_IS_QUANTIZED = true;
     private static final String TF_OD_API_MODEL_FILE = "detectV2.tflite";
-    private static final String TF_OD_API_LABELS_FILE = "file:///android_asset/labelmapDesk.txt";
+    public static final String TF_OD_API_LABELS_FILE = "file:///android_asset/labelmapDesk.txt";
     private static final DetectorMode MODE = DetectorMode.TF_OD_API;
     // Minimum detection confidence to track a detection.
-    private static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.77f;
+    private static final float MINIMUM_CONFIDENCE_TF_OD_API = 0.65f;
     private static final boolean MAINTAIN_ASPECT = false;
     private static final Size DESIRED_PREVIEW_SIZE = new Size(640, 480);
     private static final boolean SAVE_PREVIEW_BITMAP = false;

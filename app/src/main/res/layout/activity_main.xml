@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8ff"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="108dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="326dp"
+        android:text="Let΄s find some objects!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#0F0F0F"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-56dp"
+        android:layout_marginEnd="-13dp"
+        app:srcCompat="@drawable/main_icon" />
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="160dp"
+        android:layout_height="92dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="197dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="158dp"
+        android:background="@android:color/black"
+        android:text="Exit"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="160dp"
+        android:layout_height="92dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="158dp"
+        android:background="@android:color/black"
+        android:text="Search"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="22sp" />
+
+    <ImageButton
+        android:id="@+id/list_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="62dp"
+        android:adjustViewBounds="false"
+        android:background="@android:color/white"
+        android:cropToPadding="false"
+        app:srcCompat="@drawable/lampicon"
+        tools:srcCompat="@drawable/lampicon" />
+
+    <TextView
+        android:id="@+id/listTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_image_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="-431dp"
+        android:layout_marginEnd="139dp"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
+
