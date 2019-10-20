@@ -35,6 +35,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 import org.tensorflow.lite.Interpreter;
+import org.tensorflow.lite.gpu.GpuDelegate;
 import org.tensorflow.lite.examples.detection.env.Logger;
 
 /**
@@ -118,9 +119,13 @@ public class TFLiteObjectDetectionAPIModel implements Classifier {
     br.close();
 
     d.inputSize = inputSize;
-
+    // this is for gpu
+    GpuDelegate delegate = new GpuDelegate();
+    Interpreter.Options options = (new Interpreter.Options()).addDelegate(delegate);
     try {
-      d.tfLite = new Interpreter(loadModelFile(assetManager, modelFilename));
+      //d.tfLite = new Interpreter(loadModelFile(assetManager, modelFilename)); //without gpu uncomment this remove import org.tensorflow.lite.gpu.GpuDelegate; and implement lite-gpu from build gradle
+      d.tfLite = new Interpreter(loadModelFile(assetManager, modelFilename),options);
+
     } catch (Exception e) {
       throw new RuntimeException(e);
     }
@@ -142,6 +147,8 @@ public class TFLiteObjectDetectionAPIModel implements Classifier {
     d.outputClasses = new float[1][NUM_DETECTIONS];
     d.outputScores = new float[1][NUM_DETECTIONS];
     d.numDetections = new float[1];
+    //close gpu to free sources
+    delegate.close();
     return d;
   }
 
